@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                DSO Board
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Catalog</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Self-service</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-controls">
+                <button class="icon-button"><i class="fas fa-cog"></i></button>
+                <button class="icon-button"><i class="fas fa-bell"></i></button>
+                <button class="icon-button"><i class="fas fa-user-circle"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome</h1>
+        <button class="add-button">+ Add</button>
+        
+        <section class="my-services">
+            <h2>My Services</h2>
+            <div class="table-controls">
+                <div class="table-controls">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search services...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="view-controls">
+                        <button class="active" data-view="table"><i class="fas fa-list"></i> Table</button>
+                        <button data-view="grid"><i class="fas fa-th-large"></i> Grid</button>
+                    </div>
+                </div>
+            </div>
+            <table id="services-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>On Call</th>
+                        <th>Runbooks</th>
+                        <th>Monitor Dashboards</th>
+                        <th>Last Committer</th>
+                        <th>SonarQube Project</th>
+                        <th>PagerDuty Service</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="actions">
+            <h2>Actions</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-code-branch"></i>
+                    <div>
+                        <h3>Open a PR for creating an S3 Bucket</h3>
+                        <p>Create an S3 bucket using IaC, please refer to the following guide: <a href="#">Create cloud resources using IaC</a></p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-bug"></i>
+                    <div>
+                        <h3>Report a bug</h3>
+                        <p>Create a Jira bug ticket. For more information, refer to the guide: <a href="#">Report a bug action</a></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
