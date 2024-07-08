@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sample data for services
     const services = [
-        { title: 'Authorization', onCall: 'Wao Wu', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Don Tuan', sonarQubeProject: 'Authorization Service', pagerDutyService: 'Authorization Service' },
-        { title: 'Order', onCall: 'Michael Molina', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Ben Nguyen', sonarQubeProject: 'Order Service', pagerDutyService: 'Awesome Service' },
+        { title: 'Authorization', onCall: 'Wao Wu', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Huy Do', sonarQubeProject: 'Authorization Service', pagerDutyService: 'Authorization Service' },
+        { title: 'Order', onCall: 'Michael Thang', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Ben Nguyen', sonarQubeProject: 'Order Service', pagerDutyService: 'Awesome Service' },
         { title: 'Shipping', onCall: 'Ben Nguyen', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Wao Wu', sonarQubeProject: 'Shipping Service', pagerDutyService: 'Shipping Service' },
         { title: 'Fraud Detection', onCall: 'Yuliya Attias', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Wao Wu', sonarQubeProject: 'Fraud Detection Service', pagerDutyService: 'Fraud Detection Service' },
-        { title: 'Payment', onCall: 'Alexander Van', runbooks: 2, monitorDashboards: 3, lastCommitter: 'DK Nguyen', sonarQubeProject: 'Payment Service', pagerDutyService: 'Payment Service' },
-        { title: 'Admin', onCall: 'Anton Sitwat', runbooks: 2, monitorDashboards: 1, lastCommitter: 'Alexander Van', sonarQubeProject: 'Admin Service', pagerDutyService: 'Admin Service' },
+        { title: 'Payment', onCall: 'Alexander Van', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Huy Do', sonarQubeProject: 'Payment Service', pagerDutyService: 'Payment Service' },
+        { title: 'Admin', onCall: 'Anton Sitwat', runbooks: 2, monitorDashboards: 1, lastCommitter: 'Anton Sitwat', sonarQubeProject: 'Admin Service', pagerDutyService: 'Admin Service' },
     ];
 
     // Sample data for recent activities
@@ -96,10 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
         tableBody.innerHTML = services.map(service => `
             <tr>
                 <td>${service.title}</td>
-                <td><img src="https://via.placeholder.com/30" alt="${service.onCall}" title="${service.onCall}" class="avatar"></td>
+                <td>${service.onCall}</td>
                 <td><i class="fas fa-book"></i> <i class="fas fa-book"></i></td>
                 <td><i class="fas fa-chart-line"></i> <i class="fas fa-fire"></i> <i class="fas fa-exclamation-triangle"></i></td>
-                <td><img src="https://via.placeholder.com/30" alt="${service.lastCommitter}" title="${service.lastCommitter}" class="avatar"></td>
+                <td>${service.lastCommitter}</td>
                 <td>${service.sonarQubeProject}</td>
                 <td>${service.pagerDutyService}</td>
                 <td><button class="more-options"><i class="fas fa-ellipsis-h"></i></button></td>
@@ -148,10 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
         tableBody.innerHTML = filteredServices.map(service => `
             <tr>
                 <td>${service.title}</td>
-                <td><img src="https://via.placeholder.com/30" alt="${service.onCall}" title="${service.onCall}" class="avatar"></td>
+                <td>${service.onCall}</td>
                 <td><i class="fas fa-book"></i> <i class="fas fa-book"></i></td>
                 <td><i class="fas fa-chart-line"></i> <i class="fas fa-fire"></i> <i class="fas fa-exclamation-triangle"></i></td>
-                <td><img src="https://via.placeholder.com/30" alt="${service.lastCommitter}" title="${service.lastCommitter}" class="avatar"></td>
+                <td>${service.lastCommitter}</td>
                 <td>${service.sonarQubeProject}</td>
                 <td>${service.pagerDutyService}</td>
                 <td><button class="more-options"><i class="fas fa-ellipsis-h"></i></button></td>
