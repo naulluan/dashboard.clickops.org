@@ -50,7 +50,17 @@
             </ul>
             <div class="user-controls">
                 <button class="icon-button"><i class="fas fa-bell"></i></button>
-                <button class="icon-button"><i class="fas fa-user-circle"></i></button>
+                <div class="user-dropdown">
+                    <button class="icon-button user-icon"><i class="fas fa-user-circle"></i></button>
+                    <div class="user-menu">
+                        <p class="username">Luan M. Nguyen</p>
+                        <ul>
+                            <li><i class="fas fa-cog"></i> Preferences</li>
+                            <li><i class="fas fa-info-circle"></i> About</li>
+                            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -116,13 +126,6 @@
                     <!-- Table rows will be dynamically populated -->
                 </tbody>
             </table>
-            <div class="options-menu">
-                <ul>
-                    <li class="refresh"><i class="fas fa-sync-alt"></i> Refresh</li>
-                    <li class="edit"><i class="fas fa-edit"></i> Edit</li>
-                    <li class="delete"><i class="fas fa-trash-alt"></i> Delete</li>
-                </ul>
-            </div>
         </section>
 
         <section class="recent-activities">
@@ -132,6 +135,14 @@
             </ul>
         </section>
     </main>
+
+    <div class="options-menu">
+        <ul>
+            <li class="refresh"><i class="fas fa-sync-alt"></i> Refresh</li>
+            <li class="edit"><i class="fas fa-edit"></i> Edit</li>
+            <li class="delete"><i class="fas fa-trash-alt"></i> Delete</li>
+        </ul>
+    </div>
 
     <script src="app.js"></script>
 </body>

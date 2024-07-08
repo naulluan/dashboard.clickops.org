@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sample data for services
     const services = [
-        { title: 'Authorization', onCall: 'Radha Sanchez', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Kristinn Pugh', sonarQubeProject: 'Authorization Service', pagerDutyService: 'Authorization Service' },
-        { title: 'Order', onCall: 'Michael Molina', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Gary Zhu', sonarQubeProject: 'Order Service', pagerDutyService: 'Awesome Service' },
-        { title: 'Shipping', onCall: 'Gary Zhu', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Radha Sanchez', sonarQubeProject: 'Shipping Service', pagerDutyService: 'Shipping Service' },
-        { title: 'Fraud Detection', onCall: 'Yuliya Attias', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Radha Sanchez', sonarQubeProject: 'Fraud Detection Service', pagerDutyService: 'Fraud Detection Service' },
-        { title: 'Payment', onCall: 'Alexander Ma', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Daniyel Moshe', sonarQubeProject: 'Payment Service', pagerDutyService: 'Payment Service' },
-        { title: 'Admin', onCall: 'Anton Sitwat', runbooks: 2, monitorDashboards: 1, lastCommitter: 'Anton Sitwat', sonarQubeProject: 'Admin Service', pagerDutyService: 'Admin Service' },
+        { title: 'Authorization', onCall: 'Wao Wu', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Don Tuan', sonarQubeProject: 'Authorization Service', pagerDutyService: 'Authorization Service' },
+        { title: 'Order', onCall: 'Michael Molina', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Ben Nguyen', sonarQubeProject: 'Order Service', pagerDutyService: 'Awesome Service' },
+        { title: 'Shipping', onCall: 'Ben Nguyen', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Wao Wu', sonarQubeProject: 'Shipping Service', pagerDutyService: 'Shipping Service' },
+        { title: 'Fraud Detection', onCall: 'Yuliya Attias', runbooks: 2, monitorDashboards: 3, lastCommitter: 'Wao Wu', sonarQubeProject: 'Fraud Detection Service', pagerDutyService: 'Fraud Detection Service' },
+        { title: 'Payment', onCall: 'Alexander Van', runbooks: 2, monitorDashboards: 3, lastCommitter: 'DK Nguyen', sonarQubeProject: 'Payment Service', pagerDutyService: 'Payment Service' },
+        { title: 'Admin', onCall: 'Anton Sitwat', runbooks: 2, monitorDashboards: 1, lastCommitter: 'Alexander Van', sonarQubeProject: 'Admin Service', pagerDutyService: 'Admin Service' },
     ];
 
     // Sample data for recent activities
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hideOptionsMenu();
         }
     });
+
     const dropdowns = document.querySelectorAll('.dropdown');
     
     dropdowns.forEach(dropdown => {
@@ -157,6 +158,23 @@ document.addEventListener('DOMContentLoaded', function() {
             </tr>
         `).join('');
     }
+
+    document.querySelector('.user-icon').addEventListener('mouseover', function() {
+        const userMenu = document.querySelector('.user-menu');
+        userMenu.style.display = 'block';
+    });
+
+    document.querySelector('.user-dropdown').addEventListener('mouseleave', function() {
+        const userMenu = document.querySelector('.user-menu');
+        userMenu.style.display = 'none';
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!optionsMenu.contains(event.target) && !event.target.closest('.more-options')) {
+            hideOptionsMenu();
+        }
+    });
+
     renderServices();
     renderActivities();
 });

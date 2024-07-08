@@ -82,6 +82,7 @@ nav {
 
 .user-controls {
     display: flex;
+    position: relative;
 }
 
 .icon-button {
@@ -96,6 +97,56 @@ nav {
 
 .icon-button:hover {
     color: var(--primary-color);
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.user-menu .username {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu li:hover {
+    background-color: var(--background-color);
+}
+
+.user-menu li i {
+    margin-right: 10px;
+}
+
+.user-dropdown:hover .user-menu {
+    display: block;
 }
 
 main {
@@ -296,6 +347,7 @@ tbody tr {
     background-color: #fff;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
 }
 
 tbody tr:hover {
@@ -317,7 +369,6 @@ tbody tr:hover {
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    /*padding: 10px 0;*/
     min-width: 180px;
     opacity: 0;
     visibility: hidden;
@@ -400,4 +451,37 @@ tbody tr:hover {
 /* Add some spacing between sections */
 section {
     margin-bottom: 40px;
+}
+
+.options-menu {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.options-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-menu li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options-menu li:hover {
+    background-color: var(--background-color);
+}
+
+.options-menu li i {
+    margin-right: 10px;
 }
