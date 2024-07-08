@@ -485,3 +485,103 @@ section {
 .options-menu li i {
     margin-right: 10px;
 }
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    width: 90%;
+    max-width: 500px;
+    animation: slide-down 0.3s ease;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.popup-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.popup-content select,
+.popup-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.popup-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#deploy-cancel {
+    background: var(--danger-color);
+    color: #fff;
+}
+
+#deploy-cancel:hover {
+    background: #c0392b;
+}
+
+.popup-buttons button[type="submit"] {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.popup-buttons button[type="submit"]:hover {
+    background: var(--hover-color);
+}
+
+    

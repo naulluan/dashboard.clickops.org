@@ -136,6 +136,56 @@
         </section>
     </main>
 
+    <div id="deploy-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Deploy</h2>
+            <form id="deploy-form">
+                <label for="component">Component:</label>
+                <select id="component" name="component" required>
+                    <option value="">Select Component</option>
+                    <option value="Infrastructure">Infrastructure</option>
+                    <option value="Pipeline">Pipeline</option>
+                </select>
+
+                <label for="resource">Resource:</label>
+                <select id="resource" name="resource" required>
+                    <option value="">Select Resource</option>
+                </select>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="owner">Owner:</label>
+                <select id="owner" name="owner" required>
+                    <option value="Luan M.Nguyen">Luan M. Nguyen</option>
+                    <option value="Dustin Nguyen">Dustin Nguyen</option>
+                </select>
+
+                <label for="services">Services:</label>
+                <select id="services" name="services" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+
+                <div class="popup-buttons">
+                    <button type="button" id="deploy-cancel">Cancel</button>
+                    <button type="submit">Deploy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="merge-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Merge Requests</h2>
+            <div class="merge-list">
+                <!-- Merge requests will be dynamically populated here -->
+            </div>
+            <div class="popup-buttons">
+                <button id="merge-close">Close</button>
+            </div>
+        </div>
+    </div>
+
     <div class="options-menu">
         <ul>
             <li class="refresh"><i class="fas fa-sync-alt"></i> Refresh</li>
@@ -143,6 +193,8 @@
             <li class="delete"><i class="fas fa-trash-alt"></i> Delete</li>
         </ul>
     </div>
+
+    <div id="loading-spinner" class="loading-spinner"></div>
 
     <script src="app.js"></script>
 </body>
